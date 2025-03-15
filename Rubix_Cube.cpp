@@ -3,13 +3,17 @@
 int layer_1(char arr[7][3][3]);
 int layer_1_s1(char arr[7][3][3],int base);
 int layer_1_s2(char arr[7][3][3]);
-void layer_1_s3(char arr[7][3][3]);
+int layer_1_s3(char arr[7][3][3]);
+void layer_1_s4(char arr[7][3][3]);
 void layer_1_2(char arr[7][3][3]);
 int layer_1_small(char arr[7][3][3],int,int);
+
 void layer_2(char arr[7][3][3]);
 
+void layer_3(char arr[7][3][3]);
+
 void turn_1(char arr1[3][3]);
-void move(char [7][3][3],int,char,int);
+void move(char arr[7][3][3],int k,char c,int a);
 
 void up(char arr1[3][3],char arr2[3][3],char arr3[3][3],char arr4[3][3], char arr5[3][3],int);
 void down(char arr1[3][3],char arr2[3][3],char arr3[3][3],char arr4[3][3], char arr5[3][3],int);
@@ -23,7 +27,7 @@ void view(char arr[3][3]);
 int main(){
     char arr[7][3][3];  // leaving first 2d array and using other 6 2d arrays in 3d array...
     int i,j,k,a,b,a1[6];
-    char cube[55]="yrwbyyorgbogbrwyybrorgwrrbygobwoorygwwogggyyobgwwbbwro";
+    char cube[55]="wwrwywgywybgbrybowworrwyoryggrgogbgoorbygoyrgooywbbbbr";
     for(k=1;k<7;k++){
         for(i=0;i<3;i++){
             for(j=0;j<3;j++){
@@ -35,45 +39,61 @@ int main(){
     arr[1][1][1]='g'; arr[2][1][1]='o'; arr[3][1][1]='y'; arr[4][1][1]='r'; arr[5][1][1]='w'; arr[6][1][1]='b';
     printf("\n-------------------- CUBE SOLVER ---------------------\n\n");
     printf("M.U.K.H.Y.A.A.M.S.A.A.L.U:-\nTAKE GREEN COLOUR AS TOP AND BLUE COLOUR AS BOTTOM....\nFOR GREEN TAKE ORANGE AS BOTTOM...\nFOR BLUE TAKE ORANGE AS TOP...\n\nGamaninchagalaru!!!\n\n\n");
-    // input(arr[3]);  arr[3][1][1]='y';   view(arr[3]);
-    // input(arr[4]);  arr[4][1][1]='r';   view(arr[4]);
-    // input(arr[5]);  arr[5][1][1]='w';   view(arr[5]);
-    // input(arr[2]);  arr[2][1][1]='o';   view(arr[2]);
-    // input(arr[1]);  arr[1][1][1]='g';   view(arr[1]);
-    // input(arr[6]);  arr[6][1][1]='b';   view(arr[6]);
-    // for(k=1;k<7;k++){
-    //     for(i=0;i<3;i++){
-    //         for(j=0;j<3;j++){
-    //             if(arr[k][i][j]=='g')   a1[0]++;
-    //             if(arr[k][i][j]=='o')   a1[1]++;
-    //             if(arr[k][i][j]=='y')   a1[2]++;
-    //             if(arr[k][i][j]=='r')   a1[3]++;
-    //             if(arr[k][i][j]=='w')   a1[4]++;
-    //             if(arr[k][i][j]=='b')   a1[5]++;
+    input(arr[3]);  arr[3][1][1]='y';
+    input(arr[4]);  arr[4][1][1]='r';
+    input(arr[5]);  arr[5][1][1]='w';
+    input(arr[2]);  arr[2][1][1]='o';
+    input(arr[1]);  arr[1][1][1]='g';
+    input(arr[6]);  arr[6][1][1]='b';
+    for(k=1;k<7;k++){
+        for(i=0;i<3;i++){
+            for(j=0;j<3;j++){
+                if(arr[k][i][j]=='g')   a1[0]++;
+                if(arr[k][i][j]=='o')   a1[1]++;
+                if(arr[k][i][j]=='y')   a1[2]++;
+                if(arr[k][i][j]=='r')   a1[3]++;
+                if(arr[k][i][j]=='w')   a1[4]++;
+                if(arr[k][i][j]=='b')   a1[5]++;
+            }
+        }
+    }
+    for(k=0;k<6;k++){
+        if(a1[k]!=9)    printf("\nits wrong input\n");
+    }
+    // int l=0;
+    // for(i=3;i<=5;i++){
+    //     for(j=0;j<3;j++){
+    //         for(k=0;k<3;k++){
+    //             arr[i][j][k]=cube[l++];
     //         }
     //     }
     // }
-    // for(k=0;k<6;k++){
-    //     if(a1[k]!=9)    printf("\nits wrong input\n");
+    // for(i=2;i>=1;i--){
+    //     for(j=0;j<3;j++){
+    //         for(k=0;k<3;k++){
+    //             arr[i][j][k]=cube[l++];
+    //         }
+    //     }
     // }
-    int l=0;
-    for(i=1;i<7;i++){
+    // for(j=0;j<3;j++){
+    //     for(k=0;k<3;k++){
+    //         arr[6][j][k]=cube[l++];
+    //     }
+    // }
+
+    for(i=0;i<3;i++){ 
         for(j=0;j<3;j++){
-            for(k=0;k<3;k++){
-                arr[i][j][k]=cube[l++];
+            if(arr[1][i][j]!='g'){
+                layer_1(arr);
+                i=-1; break;
             }
         }
     }
-    for(i=1;i<7;i++){
-        for(j=0;j<3;j++){
-            for(k=0;k<3;k++){
-                printf("%c ",arr[i][j][k]);
-            }
-        }
-    }
-    for(i=1;i<=14;i++){ 
-        layer_1(arr);
-        // view(arr[1]);
+    layer_1_s4(arr);
+    i=1;
+    while(i<=6){
+        layer_1_s3(arr);
+        i++;
     }
     view(arr[1]);   
     view(arr[2]);   view(arr[3]);   view(arr[4]);   view(arr[5]);
@@ -113,6 +133,7 @@ int layer_1(char arr[7][3][3]){
             if(i==5)    i=1;
         }
     }
+    printf("\n");
     for(c=2,b=0;c<=5;c++){
         if(arr[c][1][0]=='g'){  // if green is in faces (orange,yellow,red,white)
             m=1,n=2;    b=1;
@@ -190,7 +211,7 @@ int layer_1(char arr[7][3][3]){
     for(i=0,n=1,c=2;i<3;i++){
         for(j=0;j<3;j++){
             if((i+j)%2==1){
-                if(!(arr[1][i][j]=='g' && arr[c][0][1]==arr[c][1][1]))  n=0;
+                if(!(arr[1][i][j]=='g' && arr[c][0][1]==arr[c][1][1]))  n=0;    // checking plus is completed or not...
                 c++;
             }
         }
@@ -271,29 +292,12 @@ int layer_1(char arr[7][3][3]){
             }
         }
     }
-    for(i=0;i<3;i++){
-        for(j=0;j<3;j++){
-            if(arr[1][i][j]!='g')   break;
-        }
-        if(j<3) break;
-    }
-    if(i==3){
-        for(i=0;i<3;i++){
-            for(c=2;c<=5;c++){
-                if(arr[c][0][i]!=arr[c][1][1])  break;
-            }
-            if(c<=5)    break;
-        }
-        if(i<3){
-            layer_1_s3(arr);
-        }
-    }
     return 0;
 }
 
 void layer_1_2(char arr[7][3][3]){
     int a,b,c,i,j,k;
-    view(arr[1]);
+    // view(arr[1]);
     for(c=2,b=0;c<=5;c++){
         i=c+1,j=c-1;
         c>3 ? k=c-2 : k=c+2;
@@ -342,19 +346,18 @@ void layer_1_2(char arr[7][3][3]){
         }
     }
 }
-int layer_1_s1(char arr[7][3][3],int base){
+int layer_1_s1(char arr[7][3][3],int base){ 
     if(base<=1) return 0;
     int a=0,i,j,m,n=0,c=0,count;
         for(i=0;i<3;i++)
             for(j=0;j<3;j++)
                 if((i+j)%2!=0 && arr[1][i][j]=='g') c++;
                 // rbyoywwrrryygrgbbwowgrwoorroywyoggwobggogoyrbwbgwbbbyy
-                // 28
         for(i=1;i<=4;i++){
             count=0;
             if(arr[1][2][1]=='g' && arr[2][0][1]==arr[2][1][1]) a=i,count++;
             if(arr[1][1][2]=='g' && arr[3][0][1]==arr[3][1][1]) a=i,count++;
-            if(arr[1][0][1]=='g' && arr[4][0][1]==arr[4][1][1]) a=i,count++;   
+            if(arr[1][0][1]=='g' && arr[4][0][1]==arr[4][1][1]) a=i,count++;
             if(arr[1][1][0]=='g' && arr[5][0][1]==arr[5][1][1]) a=i,count++;
             if((c!=1 && count<2) || (c==1 && count!=1))
                 up(arr[1],arr[2],arr[3],arr[4],arr[5],1),n++;
@@ -431,7 +434,6 @@ int layer_1_s1(char arr[7][3][3],int base){
 int layer_1_s2(char arr[7][3][3]){
     int i=0,j,n,count,a,c;
     if(arr[1][0][1]=='g' && arr[1][1][0]=='g' && arr[1][1][2]=='g' && arr[1][2][1]=='g'){
-        if(arr[1][0][0]=='g' && arr[1][0][2]=='g' && arr[1][2][0]=='g' && arr[1][2][2]=='g')    return 0;
         for(i=2;i<=5;i++)
             if(arr[i][0][1]!=arr[i][1][1])  break;      // if all green edges are set...
         count=0;
@@ -464,32 +466,105 @@ int layer_1_s2(char arr[7][3][3]){
     }
     return 0;
 }
-void layer_1_s3(char arr[7][3][3]){
-    int i,j,a,b,c;
+int layer_1_s3(char arr[7][3][3]){
+    int i,j,b,c;
     char d;
     for(c=2;c<=5;c++){
         if((d=arr[c][0][1])!=arr[c][1][1])  break;
     }
-    c==2 ? (i=3,j=5) : c==3 ? (i=4,j=2) : c==4 ? (i=5,j=3) : c==5 ? (i=2,j=4) : 0;
     if(c!=6){
         layer_1_small(arr,c,1);
-        if(d==arr[i][1][1]){
-            d=arr[i][0][1];
-            down(arr[6],arr[2],arr[3],arr[4],arr[5],3);   printf("D' ");    layer_1_small(arr,i,1);
+        while(1){
+            // yyybywrrrrrwbrybwbowrowywbywooroobobgggggggggowwybbory
+            // ryowyrbwbyrrbrrrbbwwwywywwyooyooobbrgggggggggoyyrbboow
+            c==2 ? (i=3,j=5) : c==3 ? (i=4,j=2) : c==4 ? (i=5,j=3) : c==5 ? (i=2,j=4) : 0;
+            if(d==arr[j][1][1]){
+                d=arr[j][0][1];
+                move(arr,c,'d',1);  layer_1_small(arr,j,1);
+                c=j;
+            }
+            else if(d==arr[i][1][1]){ 
+                d=arr[i][0][1];
+                move(arr,c,'d',3);  layer_1_small(arr,i,1);
+                c=i;
+            }
+            else{
+                c>3 ? i=c-2 : i=c+2;
+                d=arr[i][0][1];    layer_1_small(arr,i,1);
+                c=i;
+            }
+            for(i=0;i<3;i++){
+                for(j=0;j<3;j++){
+                    if(arr[1][i][j]!='g')   break;
+                }
+                if(j!=3)    break;
+            }
+            if(i==3)    break;
         }
-        
     }
     else{
-
+        for(c=2;c<=5;c++){
+            for(i=0;i<=2;i+=2){
+                if(arr[c][0][i]!=arr[c][1][1])  break;
+            }
+            if(i!=4)    break;
+        }
+        c==2 ? (i=3,j=5) : c==3 ? (i=4,j=2) : c==4 ? (i=5,j=3) : (i=2,j=4);
+        if(c==6)    return 1;
+        else if(arr[c][0][2]!=arr[c][1][1]){
+            if(arr[c][0][2]==arr[i][1][1]){
+                move(arr,i,'l',1);  move(arr,i,'d',1);  move(arr,i,'l',3);
+            }
+            else {
+                move(arr,c,'r',3);  move(arr,c,'d',3);  move(arr,c,'r',1);
+            }
+        }
+        else{
+            if(arr[c][0][0]==arr[i][1][1]){
+                move(arr,c,'l',1);  move(arr,c,'d',1);  move(arr,c,'l',3);
+            }
+            else {
+                move(arr,j,'r',3);  move(arr,c,'d',3);  move(arr,c,'j',1);
+            }
+        }
+        for(i=0;i<=2;i+=2){
+            for(j=0;j<=2;j+=2){
+                if(arr[1][i][j]!='g'){
+                    layer_1_2(arr);
+                    i=-2; break;
+                }
+            }
+        }
     }
+    return 0;
 }
+
+void layer_1_s4(char arr[7][3][3]){
+    int i,count,a=0,c;
+    for(i=1;i<=3;i++){
+        count=0;
+        for(c=2;c<=5;c++){
+            if(arr[c][0][1]==arr[c][1][1])  count++;
+        }
+        if(count<2){
+            a++;
+            up(arr[1],arr[2],arr[3],arr[4],arr[5],1);
+        }
+        else    break;
+    }
+    printf(a==3 ? "U' " : a==2 ? "U2 " : a==1 ? "U " : 0);
+}
+
+// yrywyyrrrryrorwbyywowrwybbboworoowobgggggggggobwwbboby
 
 int layer_1_small(char arr[7][3][3],int c,int a){
     move(arr,c,'r',1);  move(arr,c,'l',3);  move(arr,c,'f',a);
     move(arr,c,'r',3);  move(arr,c,'l',1);
+    printf("\n");
+    return 0;
 }
 
-void move(char arr[6][3][3],int k,char c,int a){
+void move(char arr[7][3][3],int k,char c,int a){
     int i,j;
     char b;
     for(i=1;i<=a;i++){
@@ -542,6 +617,7 @@ void input(char arr[3][3]){
         printf("enter %d row: ",i+1);
         scanf(" %c %c %c",&arr[i][0],&arr[i][1],&arr[i][2]);
     }
+    view(arr);
 }
 void view(char arr[3][3]){
     int i,j;
