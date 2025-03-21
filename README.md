@@ -1,0 +1,56 @@
+for rubix cube.. 
+use theese inputs by removing coment lines (//)..
+
+// wwrgyyoryyoygrrobbrorgwwobwbyrgooobggybwgbwrgbywobwyrg
+// wwrwywgywybgbrybowworrwyoryggrgogbgoorbygoyrgooywbbbbr
+// wwrwywoyyybrbrbbwgbyrowyoybgorgogwgywrbbgoyggorgobrwro
+// bgwoyrowwggggrrbyoyyywwywwybrwoobbwyrorbgyrbooggbbogrr 1
+// gybyygybgwwwrrgobbgrywwgwrbbbroogobgrorygorwyyrowbooyw
+// ggbyyywrgwrobrowogbwbbwgyoorbrworwrbybrogyywygwoybgogr 1
+// ygbgyorwywrywroorooowgwybryobroorgbwbbrbgygybrwgybgwwg
+// owwwyoororowwrbwwrgbyowybrgobbgobrgyrybyggbrwyogybgyrg
+// yrwbyyorgbogbrwyybrorgwrrbygobwoorygwwogggyyobgwwbbwro 
+// wwbbyrrygworyrworrgoorwggooyborooybyygrygggybbwbwbgwbw 1
+// ybwrygrybgwgyryrgrwbbrwgyowygoroboryoorwgyoogbwbbbogww
+// rrwwyyyyybbobrobyygbybwogwwbygworbogwworggrgwrgogborro   1
+// gorbyyyobwrggrworbwwwowyrryboybowgbboggggyogorrrwbbwyy
+// yyywywyorbrwbrbwrybwwrwobbroooworgorogrggggggwygybboyb
+// oyyoywbbybrrbrobrgwwwywyryboogbowwwwggrgggggyorrrboybo
+// owwoyobbogbgwrogbwyrbgwygrrybbroybywryrwggorwygrgboowy
+// goroybwrryybrrbgygowbowwrobybyrowrgowgbgggowowrgybyybw 8
+// yyywywyorbrwbrbwrybwwrwobbroooworgorogrggggggwygybboyb
+// yywryrbwrorgbrbyoyrwwowybryrooboyrbowgggggbggbwwwbooyg
+// yoobybwwrwwwyrbgogroyrwyrwygybroorrobrbyggogobgggbbyww
+// yybryrwyrwrrwryybbwwwowwobroooooybbbggrggggggyworbbyog
+// U set...
+// gygwybwobrobyryyrwwroowboroywrworyborgwgggggybogybwbbr
+// yoobyboobyybyrbwrrrrywwwwowrwbroorygygggggggogrwybwbbo   
+// gybwyboobrrbyrowrryoybwwwowrworobryyogygggggwgrgybwbbo
+// rybbyboobroworbwryrwowwwbowgryroyryybgygggwgggrgybwobo
+// gwboyyowgwrworboywbybowwrbgrorrowyybogrgggygyoryrbbgbw
+// bowbyyowgrrborwrywywyowwryygywroorrgogbgggogobbwrbbgby
+// brooywowrwwgorywrwroyowygrygyybobgbbwgbgggogrrrywbboyb
+// wybbywoorowgbrowworryywbgbyrogoorrybwgwgggggobryybwyrb
+// yyyryybrwrrwbrobbbowrywbywbwoowowooogggggggggybwobyrrr
+// yyybywrrrrrwbrybwbowrowywbywooroobobgggggggggowwybbory
+// ryowyrbwbyrrbrrrbbwwwywywwyooyooobbrgggggggggoyyrbboow
+// green is already set..
+// worst case layer-2
+// yyyoyrbww rrryrwbyb wwwrwowob ooowoyorr ggggggggg ybybbbobr
+// yyyoyrbrw rrryrwobo wwwrwoyob ooowoyrbr ggggggggg wyybbbbwb
+// yyyryybyb rrrrrbwww wwwowbbwb oooyoworr ggggggggg ybyoborbo
+// yyyyyboworrrrrrbybwwwwwwyowoooooobrbgggggggggryybbbrbw
+// without using layer 1 formula...
+// yrwbyyorgbogbrwyybrorgwrrbygobwoorygwwogggyyobgwwbbwro
+// yyyyyyoyb rrrrrrrbo wwwwwwbrr oooooobbb ggggggggg ywybbbwow
+// yyyyyyybrrrrrrrwbywwwwwwrbwooooooobogggggggggbrbobwbyb
+// yyyyyyrybrrrrrrorrwwwwwwbwooooooobobgggggggggwbwbbbyby
+// yyyyyyybbrrrrrrybbwwwwwwwbboooooorbogggggggggwrbobwoyr
+// yyyyyyrbbrrrrrrwbbwwwwwwobyoooooorbbgggggggggbwwyboyro
+// rybbyboobroworbwryrwowwwbowgryroyryybgygggwgggrgybwobo
+// oyrbyrowrbgogrwgbggobgwgyryrrbyorgybwowwgbyywroywbboow
+// yyyyyyoborrrrrrybrwwwwwwwbyoooooorbwgggggggggbobybrbwb
+// yyyyyybbbrrrrrrrbywwwwwwrboooooooybogggggggggbwwobrbyw
+// yyyyyyyyyrrrrrrrrrwwwwwwwwwooooooooogggggggggbbbbbbbbb
+// wwgwyowyb yrbgrrwrg rywwwoyoo ryrbooygo ygrbgbbgg bwgybrobo
+// yyyyyyoyrrrrrrrbrbwwwwwwrwooooooobobgggggggggwbybbbwby
