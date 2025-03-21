@@ -1,23 +1,23 @@
 for rubix cube.. 
-use theese inputs by removing coment lines (//)..
+use theese inputs to test by removing coment lines (//)..
 
 // wwrgyyoryyoygrrobbrorgwwobwbyrgooobggybwgbwrgbywobwyrg
 // wwrwywgywybgbrybowworrwyoryggrgogbgoorbygoyrgooywbbbbr
 // wwrwywoyyybrbrbbwgbyrowyoybgorgogwgywrbbgoyggorgobrwro
-// bgwoyrowwggggrrbyoyyywwywwybrwoobbwyrorbgyrbooggbbogrr 1
+// bgwoyrowwggggrrbyoyyywwywwybrwoobbwyrorbgyrbooggbbogrr
 // gybyygybgwwwrrgobbgrywwgwrbbbroogobgrorygorwyyrowbooyw
-// ggbyyywrgwrobrowogbwbbwgyoorbrworwrbybrogyywygwoybgogr 1
+// ggbyyywrgwrobrowogbwbbwgyoorbrworwrbybrogyywygwoybgogr
 // ygbgyorwywrywroorooowgwybryobroorgbwbbrbgygybrwgybgwwg
 // owwwyoororowwrbwwrgbyowybrgobbgobrgyrybyggbrwyogybgyrg
 // yrwbyyorgbogbrwyybrorgwrrbygobwoorygwwogggyyobgwwbbwro 
-// wwbbyrrygworyrworrgoorwggooyborooybyygrygggybbwbwbgwbw 1
+// wwbbyrrygworyrworrgoorwggooyborooybyygrygggybbwbwbgwbw
 // ybwrygrybgwgyryrgrwbbrwgyowygoroboryoorwgyoogbwbbbogww
-// rrwwyyyyybbobrobyygbybwogwwbygworbogwworggrgwrgogborro   1
+// rrwwyyyyybbobrobyygbybwogwwbygworbogwworggrgwrgogborro
 // gorbyyyobwrggrworbwwwowyrryboybowgbboggggyogorrrwbbwyy
 // yyywywyorbrwbrbwrybwwrwobbroooworgorogrggggggwygybboyb
 // oyyoywbbybrrbrobrgwwwywyryboogbowwwwggrgggggyorrrboybo
 // owwoyobbogbgwrogbwyrbgwygrrybbroybywryrwggorwygrgboowy
-// goroybwrryybrrbgygowbowwrobybyrowrgowgbgggowowrgybyybw 8
+// goroybwrryybrrbgygowbowwrobybyrowrgowgbgggowowrgybyybw
 // yyywywyorbrwbrbwrybwwrwobbroooworgorogrggggggwygybboyb
 // yywryrbwrorgbrbyoyrwwowybryrooboyrbowgggggbggbwwwbooyg
 // yoobybwwrwwwyrbgogroyrwyrwygybroorrobrbyggogobgggbbyww
